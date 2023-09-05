@@ -1,10 +1,12 @@
-## Atuadores
+# Rang
+
+## Atores
 
 Os atores são os usuários ou sistemas externos que interagem com o sistema. Identificamos os seguintes atores principais:
 
-1. **Usuários**: Os usuários finais que utilizam a aplicação para realizar várias operações, como registro, login, agendamento de consultas, etc.
-2. **Administradores**: Os administradores do sistema que têm privilégios adicionais, como gerenciar usuários, unidades de saúde, médicos, etc.
-3. **Médicos**: Os médicos que fornecem serviços médicos em unidades de saúde específicas.
+1. **Usuários**: 
+2. **Administradores**: 
+3. **Médicos**:
 
 ## Casos de Uso
 
@@ -36,25 +38,17 @@ Aqui estão alguns dos principais casos de uso do sistema:
 ### Autenticação de Usuário
 
 - **RF01**: O sistema deve permitir que os usuários se autentiquem fornecendo nome de usuário e senha.
-- **RF02**: O sistema deve gerar um token JWT após a autenticação bem-sucedida.
+- **RF02**: O sistema deve gerar um cokie JWT após a autenticação bem-sucedida.
 
 ### Registro de Usuário
 
-- **RF03**: O sistema deve permitir que os usuários se registrem fornecendo informações pessoais, o cadastro padrão e de admin.
+- **RF03**: O sistema deve permitir que os usuários se registrem fornecendo informações pessoais.
 - **RF04**: O sistema deve verificar se o nome de usuário e o CPF não estão em uso antes de permitir o registro.
 
 ### Agendamento de Consultas
 
-- **RF05**: Os usuários devem poder agendar consultas com médicos em unidades de saúde específicas.
+- **RF05**: Os usuários devem poder agendar consultas com médicos.
 - **RF06**: O sistema deve verificar a disponibilidade da consulta antes de agendá-la.
-
-### Gerenciamento de Unidades de Saúde
-
-- **RF07**: Os administradores devem poder adicionar, atualizar e excluir unidades de saúde no sistema.
-
-### Gerenciamento de Médicos
-
-- **RF08**: Os administradores devem poder adicionar, atualizar e excluir informações sobre médicos no sistema.
 
 ## Requisitos Não Funcionais
 
