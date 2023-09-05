@@ -1,0 +1,46 @@
+.search-form
+{
+    margin-left: 30%;
+    margin-top: 2%;
+}
+
+h2
+{
+    margin-left: 40%;
+}
+
+input
+{
+    height: 30px;
+    border-radius: 4px;
+    width: 280px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+}
+
+.btn-search
+{
+   height: 30px;
+   border-radius: 10px;
+   color: #fff;
+   background-color: #007bff;
+   border-color: #007bff;
+   margin-top: 6px;
+}
+
+.btn-add
+{
+    margin-top: 12px;
+    position: absolute;
+}
+
+@media (min-width: 768px)
+{
+    .col-md-10 {
+        flex: 0 0 auto;
+        width: 60%;
+        margin-left: 20%;
+    }
+}
