@@ -1,24 +1,24 @@
 # Documentação da API
 
-Esta documentação fornece uma visão geral dos endpoints e funcionalidades da API REST para um sistema de gerenciamento de saúde. O sistema consiste em vários controladores para gerenciar unidades de saúde, médicos, consultas e autenticação de usuários. O codigo foi pensado no padrão de projeto SOLID.
-
+Esta documentação fornece uma visão geral dos endpoints e funcionalidades da API REST para um sistema de agendamento de consultas. O codigo foi pensado no padrão de projeto SOLID.
 
 ## Autorização
 
-Este controlador requer autenticação para algumas operações. Os tokens JWT são usados para autenticação e autorização. Certifique-se de incluir o token JWT nas solicitações autorizadas.
+Este controlador requer autenticação para algumas operações. Os cokies JWT são usados para autenticação e autorização. 
 
 ## Autenticar Usuário
 
 - **URL**: `/api/auth/signin`
 - **Método**: `POST`
-- **Descrição**: Autentica um usuário e gera um token JWT.
+- **Descrição**: Autentica um usuário e gera um cokie JWT.
 - **Parâmetros**:
   {
-	 "password" : "123456a",
-	 "username" : "root"
+  
+	  "password" : "123456a",
+	  "username" : "root"
   }
 - **Resposta**:
-  - Sucesso: 200 OK com o token JWT.
+  - Sucesso: 200 OK com o cokie JWT.
   - Falha: 400 Bad Request com uma mensagem de erro se as credenciais forem inválidas.
 
 ## Registrar Usuário
@@ -29,10 +29,10 @@ Este controlador requer autenticação para algumas operações. Os tokens JWT s
 - **Parâmetros**:
   {
 	
-	  "password" : "123456a",
-	  "username" : "root",
-	  "cpf": "721.281.144-82",
-	  "role" : "ROLE_PATIENT"
+	  "password" : "",
+	  "username" : "",
+	  "cpf": "",
+	  "role" : ""
   }   
 - **Resposta**:
   - Sucesso: 200 OK com uma mensagem de confirmação.
@@ -55,6 +55,7 @@ Este controlador requer autenticação para algumas operações. Os tokens JWT s
 - **Descrição**: Adiciona uma nova unidade de saúde ao sistema.
 - **Parâmetros**:
   {
+  
 	  "name" : "teste",
 	  "city" : "teste",
 	  "street" : "rua teste",
@@ -92,11 +93,12 @@ Este controlador requer autenticação para algumas operações. Os tokens JWT s
 - **Descrição**: Adiciona um novo médico ao sistema.
 - **Parâmetros**:
   {
-    "crm" : "",
-    "specialty" : "",
-    "username" : "",
-    "password" : "",
-    "healthUnit" : 1
+  
+    	"crm" : "",
+    	"specialty" : "",
+    	"username" : "",
+    	"password" : "",
+    	"healthUnit" : 1
   } 
 - **Autorização**: Requer que o usuário tenha a função 'ADM'.
 - **Resposta**:
@@ -131,13 +133,13 @@ Este controlador requer autenticação para algumas operações. Os tokens JWT s
 - **Descrição**: Adiciona um novo agendamento de consulta ao sistema.
 - **Parâmetros**:
   {
-    "state" : "",
-    "crm" : "",
-    "cpf" : "",
-    "date" : "",
-    "time" : "",
+  
+     	"state" : "",
+         "crm" : "",
+     	"cpf" : "",
+     	"date" : "",
+     	"time" : "",
   }
-- **Autorização**: Requer que o usuário tenha a função 'ADM'.
 - **Resposta**:
   - Sucesso: 200 OK com uma mensagem de sucesso.
   - Falha: 400 Bad Request com uma mensagem de erro se a data já estiver agendada para o médico e paciente especificados.
